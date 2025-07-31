@@ -40,3 +40,14 @@ function knightMoves(start, end) {
         }
     }
 }
+
+function displayKnightMoves(start, end) {
+    const path = knightMoves(start, end);
+    console.log(`You made it in ${path.length - 1} moves! Here's your path:`);
+    path.forEach(pos => console.log(`[${pos[0]},${pos[1]}]`));
+}
+
+displayKnightMoves([3, 3], [4, 3]);
+displayKnightMoves([0, 0], [1, 2]);
+displayKnightMoves([0, 0], [3, 3]);
+displayKnightMoves([0, 0], [7, 7]);
